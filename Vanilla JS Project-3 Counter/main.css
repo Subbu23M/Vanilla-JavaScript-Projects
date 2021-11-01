@@ -1,0 +1,167 @@
+a,
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  background-color: lavender;
+  color: teal;
+}
+
+nav ul li a {
+  color: darkmagenta;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main .container {
+  min-height: 50vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main .container .count {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+main .container .spanElement {
+  font-size: 5rem;
+  color: darkred;
+}
+
+main .container .button-container button {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1rem;
+  background: transparent;
+  cursor: pointer;
+  border: 2px solid darkslategray;
+  border-radius: 0.2rem;
+  display: inline-block;
+  padding: 0.5rem 0.25rem;
+  margin: 1rem;
+}
+
+main .container .button-container button:hover {
+  background-color: #9e2323;
+  color: white;
+}
+
+.game {
+  text-align: center;
+  margin-top: 15rem;
+}
+
+.game .guessHeader {
+  color: green;
+}
+
+.game .guessParagraph {
+  color: maroon;
+}
+
+.game #start {
+  background: transparent;
+  background-color: lightseagreen;
+  text-transform: uppercase;
+  border: none;
+  font-size: 1rem;
+  padding: 0.4rem 0.5rem;
+  cursor: pointer;
+  width: 100px;
+}
+
+.game #start:hover {
+  background-color: lightyellow;
+  color: navy;
+}
+
+table,
+th,
+td {
+  border: 5px solid teal;
+  border-collapse: collapse;
+}
+
+table caption,
+th caption,
+td caption {
+  color: deepskyblue;
+}
+
+table th,
+th th,
+td th {
+  text-align: left;
+}
+
+table td,
+th td,
+td td {
+  text-align: center;
+  color: darkred;
+}
+
+.fruit {
+  color: darkred;
+}
+
+.fruit:hover {
+  color: brown;
+  text-decoration: underline;
+}
+
+img {
+  width: 500px;
+  height: 250px;
+  outline: 5px solid lemonchiffon;
+  margin-left: 0.4rem;
+}
+
+.form {
+  text-align: center;
+  font-size: 2rem;
+}
+
+form {
+  margin-left: 1rem;
+}
+
+form .submit {
+  background: transparent;
+  color: lightcoral;
+  font-size: 1rem;
+  border: 2px solid forestgreen;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+form .submit:hover {
+  background-color: lightcyan;
+  color: darkgray;
+}
+/*# sourceMappingURL=main.css.map */

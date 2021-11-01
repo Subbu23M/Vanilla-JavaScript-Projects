@@ -1,0 +1,208 @@
+// Universal Effects
+
+$fontFamily:'Open Sans',
+sans-serif;
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+button {
+    font-family: $fontFamily;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: $fontFamily;
+    background-color: lavender;
+    color: teal;
+}
+
+nav {
+    ul {
+        li {
+            a {
+                color: darkmagenta;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+main {
+    .container {
+
+        min-height: 50vh;
+
+        // Convert row into column
+        display: grid;
+
+        //The CSS place-items shorthand property allows you to align items along both the block and inline directions at once (i.e. the align-items and justify-items properties) in a relevant layout system such as Grid or Flex box. 
+        place-items: center;
+
+        .count {
+            font-size: 2rem;
+            text-transform: capitalize;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .spanElement {
+            font-size: 5rem;
+            color: darkred;
+        }
+
+        .button-container {
+
+            button {
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 1rem;
+
+                //Transparent color in CSS makes background elements visible from another top element of the page.
+                background: transparent;
+
+                cursor: pointer;
+
+                // border:size style color
+                border: 2px solid darkslategray;
+
+                border-radius: 0.2rem;
+
+                // For inline-block we can add top right margin padding.
+                //It does not move to next line. 
+                display: inline-block;
+
+                // padding:top & bottom left & right
+                padding: 0.5rem 0.25rem;
+
+                margin: 1rem;
+
+                &:hover {
+                    background-color: rgb(158, 35, 35);
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.game {
+
+    text-align: center;
+
+    margin-top: 15rem;
+
+    .guessHeader {
+        color: green;
+    }
+
+    .guessParagraph {
+        color: maroon;
+    }
+
+    #start {
+        //Transparent color in CSS makes background elements visible from another top element of the page.
+        background: transparent;
+
+        background-color: lightseagreen;
+        text-transform: uppercase;
+        border: none;
+        font-size: 1rem;
+
+        // padding:top & bottom left & right
+        padding: 0.4rem 0.5rem;
+
+        cursor: pointer;
+        width: 100px;
+
+        &:hover {
+            background-color: lightyellow;
+            color: navy;
+        }
+    }
+}
+
+table,
+th,
+td {
+    // border:size style color
+    border: 5px solid teal;
+
+    border-collapse: collapse;
+
+    caption {
+        color: deepskyblue;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    td {
+        text-align: center;
+        color: darkred;
+    }
+}
+
+.fruit {
+    color: darkred;
+
+    &:hover {
+        color: brown;
+        text-decoration: underline;
+    }
+}
+
+img {
+    width: 500px;
+    height: 250px;
+
+    // outline:size style color
+    outline: 5px solid lemonchiffon;
+
+    margin-left: 0.4rem;
+}
+
+.form {
+    text-align: center;
+    font-size: 2rem;
+}
+
+form {
+    margin-left: 1rem;
+
+    .submit {
+        //Transparent color in CSS makes background elements visible from another top element of the page.
+        background: transparent;
+
+        color: lightcoral;
+        font-size: 1rem;
+
+        // border:size style color
+        border: 2px solid forestgreen;
+
+        padding: 0.4rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: lightcyan;
+            color: darkgray;
+        }
+    }
+}
