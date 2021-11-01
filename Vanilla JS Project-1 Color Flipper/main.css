@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Piazzolla', serif;
+  background-color: #f1f5f8;
+  color: #102a42;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  font-family: 'Piazzolla', serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+h2, h3 {
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+nav {
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 4rem;
+}
+
+nav .nav-center {
+  width: 90vw;
+  max-width: 620px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .nav-center h3 {
+  color: #49a6e9;
+}
+
+nav .nav-center .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .nav-center .nav-links li a {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #063251;
+  margin-right: 1em;
+}
+
+nav .nav-center .nav-links li a:hover {
+  color: lightsalmon;
+}
+
+main {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main .container {
+  text-align: center;
+}
+
+main .container h2 {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+main .container h2 .span-color {
+  color: #49a6e9;
+}
+
+main .container .btn-element {
+  text-transform: uppercase;
+  background: transparent;
+  padding: 1rem 2rem;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  font-size: 1rem;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: 2px solid #222;
+  border-radius: 20px;
+}
+
+main .container .btn-element:hover {
+  background-color: #222;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */
