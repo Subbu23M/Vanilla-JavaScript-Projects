@@ -1,0 +1,179 @@
+@charset "UTF-8";
+body {
+  font-family: 'Piazzolla', serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f1f5f8;
+  color: #102a42;
+}
+
+button:focus {
+  outline: none;
+}
+
+button {
+  font-family: 'Piazzolla', serif;
+}
+
+h2, h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.1rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  color: #617d98;
+  margin-bottom: 1.25rem;
+}
+
+main {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main .container {
+  width: 80vw;
+  max-width: 620px;
+}
+
+main .container .title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+main .container .title .underline {
+  width: 13rem;
+  height: 0.25rem;
+  background-color: #49a6e9;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .container .review {
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+main .container .review .review:hover {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+main .container .review .image-container {
+  /* position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+main .container .review .image-container #person-image {
+  width: 100%;
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  /* position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+  position: relative;
+}
+
+main .container .review .image-container::before {
+  content: "";
+  /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #49a6e9;
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+}
+
+main .container .review .image-container::after {
+  font-weight: 900;
+  content: '\2660';
+  /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+  background: #49a6e9;
+  color: #fff;
+}
+
+main .container .review #name {
+  margin-bottom: 0.25rem;
+}
+
+main .container .review #job-role {
+  color: #49a6e9;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+main .container .review #info {
+  margin-bottom: 0.75rem;
+}
+
+main .container .review .previous-button, main .container .review .next-button {
+  color: #8bcbf9;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  margin: 0 0.5rem;
+  font-size: 1.24rem;
+}
+
+main .container .review .previous-button:hover, main .container .review .next-button:hover {
+  color: #49a6e9;
+}
+
+main .container .review .random-button {
+  margin-top: 0.5rem;
+  color: #49a6e9;
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  border-color: transparent;
+  background-color: #ebf7ff;
+  border-radius: 0.24rem;
+}
+
+main .container .review .random-button:hover {
+  background-color: #49a6e9;
+  color: #063251;
+}
+/*# sourceMappingURL=main.css.map */

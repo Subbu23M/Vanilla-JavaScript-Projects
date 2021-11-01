@@ -1,0 +1,233 @@
+// Colors
+
+// hsl-hue,saturation and lightness
+
+$backgroundColor:hsl(210, 36%, 96%);
+$textColor:hsl(209, 61%, 16%);
+$underlineColor:hsl(205, 78%, 60%);
+$whiteColor:#fff;
+$pColor:hsl(210, 22%, 49%);
+$prevButtonColor:hsl(205, 90%, 76%);
+$randomBackgroundColor:hsl(205, 100%, 96%);
+$randomBackgroundColorHover:hsl(205, 86%, 17%);
+
+// box-shadow:<offsetx> <offsety> <blurradius>
+$boxShadow:0 5px 15px rgba(0, 0, 0, 0.1);
+$darkShadow:0 5px 15px rgba(0, 0, 0, 0.2);
+
+//transition:default value timing-duration transition-timing-function:linear specifies a transition effect with the same speed from start to end.
+$transition:all 0.3s linear;
+
+// Universal Effects
+body{
+    font-family: 'Piazzolla', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $backgroundColor;
+    color: $textColor;
+}
+
+button:focus{
+    outline: none;
+}
+
+button{
+    font-family: 'Piazzolla', serif;
+}
+
+// For all headers
+h2,h4{
+    letter-spacing:0.1rem;
+    text-transform: capitalize;
+
+    // On Y-axis
+    line-height: 1.25;
+
+    margin-bottom: 0.1rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h4{
+    font-size: 0.875rem;
+}
+
+p{
+    color: $pColor;
+    margin-bottom: 1.25rem;
+}
+
+main{
+    min-height: 100vh;
+
+    // Convert row into column
+    display: grid;
+
+    //The CSS place-items shorthand property allows you to align items along both the block and inline directions at once (i.e. the align-items and justify-items properties) in a relevant layout system such as Grid or Flexbox.     
+    place-items: center;
+
+    .container{
+        width: 80vw;
+        max-width:620px;
+
+        .title{
+            text-align: center;
+            margin-bottom: 2rem;
+    
+            .underline{
+                width: 13rem;
+                height: 0.25rem;
+                background-color: $underlineColor;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .review{
+            background-color: $whiteColor;
+
+            // padding:top & bottom left & right
+            padding: 1.5rem 2rem;
+
+            border-radius:0.25rem;
+            box-shadow: $boxShadow;
+            text-align: center;
+            transition: $transition;
+
+            .review:hover{
+                box-shadow: $darkShadow;
+            }
+
+            .image-container{
+                /* position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+                position: relative;
+
+                width: 150px;
+                height: 150px;
+                // border-radius: 50%;
+                margin: 0 auto;
+                margin-bottom:1.5rem;
+
+                #person-image{
+                    width: 100%;
+
+                    // Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width.
+                    display: block;
+
+                    height: 100%;
+
+                    // If we use object-fit: cover; it will cut off the sides of the image, preserving the aspect ratio, and also filling in the space
+                    // The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container.
+                    object-fit: cover;
+
+                    border-radius: 50%;
+
+                    /* position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+                    position: relative;
+                }
+            }
+
+            .image-container::before{
+                content: "";
+
+                /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+                position: absolute;
+
+                width: 100%;
+                height: 100%;
+                background: $underlineColor;
+                top: -0.25rem;
+                right: -0.5rem;
+                border-radius: 50%;
+            }
+
+            .image-container::after{
+                font-weight: 900;
+
+                // BLACK SPADE SUIT
+                // CSS Entity
+                content: '\2660';
+
+                /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+                position: absolute;
+
+                top: 0;
+                left: 0;
+                width: 2.5rem;
+                height: 2.5rem;
+
+                // convert row into column
+                display: grid;
+
+                //The CSS place-items shorthand property allows you to align items along both the block and inline directions at once (i.e. the align-items and justify-items properties) in a relevant layout system such as Grid or Flexbox.     
+                place-items: center;
+
+                border-radius: 50%;
+
+                // The translateY() CSS function repositions an element vertically on the 2D plane
+                transform: translateY(25%);
+
+                background: $underlineColor;
+                color: $whiteColor;
+            }
+            #name{
+                margin-bottom: 0.25rem;
+            }
+
+            #job-role{
+                color: $underlineColor;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            #info{
+                margin-bottom: 0.75rem;
+            }
+
+            .previous-button,.next-button{
+                color: $prevButtonColor;
+
+                //Transparent color in CSS makes background elements visible from another top element of the page
+                background: transparent;
+                border-color: transparent;
+
+                cursor: pointer;
+                transition: $transition;
+
+                // margin:top & bottom left & right
+                margin: 0 0.5rem;
+
+                font-size: 1.24rem;
+            }
+            .previous-button:hover,.next-button:hover{
+                color: $underlineColor;
+            }
+
+            .random-button{
+                margin-top: 0.5rem;
+                color: $underlineColor;
+
+                // padding:top & bottom left & right
+                padding: 0.25rem 0.5rem;
+                
+                text-transform: capitalize;
+                transition: $transition;
+                cursor: pointer;
+
+                //Transparent color in CSS makes background elements visible from another top element of the page
+                border-color: transparent;
+
+                background-color: $randomBackgroundColor;
+                border-radius: 0.24rem;
+            }
+            .random-button:hover{
+                background-color: $underlineColor;
+                color: $randomBackgroundColorHover;
+            }
+        }
+    }   
+}
