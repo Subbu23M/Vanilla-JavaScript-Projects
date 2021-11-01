@@ -1,0 +1,149 @@
+// Colors
+// hsl stands for - (hue, saturation and lightness)
+
+$backgroundColor:hsl(210, 36%, 96%);
+$textColor: hsl(209, 61%, 16%);
+$goldColor:#C59D5F;
+$paragraphColor:hsl(210, 22%, 49%);
+$whiteColor:#fff;
+$borderRadius:0.5rem;
+$letterSpacing:0.25rem;
+
+// $transition:default value transition-delay.
+// transition-timing-function:linear - specifies a transition effect with the same speed from start to end.
+$transition:all 0.3s linear;
+
+// $lightShadow:<offset-x> <offset-y> <blur-radius>
+$lightShadow:0 5px 15px rgba(0, 0, 0, 0.1);
+
+$primaryFont:'Piazzolla', serif;
+
+body{
+    font-family: $primaryFont;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $backgroundColor;
+    color: $textColor;
+}
+
+button:focus{
+    outline: none;
+}
+
+h2{
+    text-transform: capitalize;
+    letter-spacing: $letterSpacing;
+
+    // On Y-axis
+    line-height: 1.25;
+
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+}
+
+p{
+    margin-bottom: 1.25rem;
+    color: $paragraphColor;
+    text-transform: capitalize;
+}
+
+section{
+    // convert row into column
+    display: grid;
+
+    //The CSS place-items shorthand property allows you to align items along both the block and inline directions at once (i.e. the align-items and justify-items properties) in a relevant layout system such as Grid or Flexbox.     
+    place-items: center;
+
+    .title{
+        margin-top: 15vh;
+        margin-bottom: 4rem;
+
+        h2{
+            color: $goldColor;
+            text-align: center;
+        }
+    }
+
+    .question-section{
+        max-width: 620px;
+
+        .question{
+            background-color: $whiteColor;
+            border-radius: $borderRadius;
+            box-shadow: $lightShadow;
+            margin-bottom: 2rem;
+
+            // padding:top right bottom left
+            padding: 1.5rem 1.5rem 0 1.5rem;
+
+            .question-title{
+                // convert column into row
+                display: flex;
+
+                // On X-axis
+                justify-content: space-between;
+
+                // On Y-axis
+                align-items: center;
+
+                padding-bottom: 1rem;
+
+                p{
+                    margin-bottom: 0;
+                    letter-spacing: $letterSpacing;
+                    color: $textColor;
+                }
+
+                .question-button{
+                    font-size: 1.5rem;
+
+                    //Transparent color in CSS makes background elements visible from another top element of the page.
+                    background-color: transparent;
+                    border-color: transparent;
+
+                    color: $goldColor;
+                    transition: $transition;
+                    cursor: pointer;
+                }
+
+                .question-button:hover{
+                    transform: rotate(90deg);
+                }
+            }
+
+            .answer-title{
+                // padding:top right bottom left
+                padding: 1rem 0 1.5rem 0;
+
+                // border-top:size style color
+                border-top: 1px solid rgba(0,0,0,0.2);
+
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.minus-icon,.answer-title{
+    display: none;
+}
+
+// Added the .show-answer class using JS
+.show-answer{
+    .answer-title{
+        // Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width.
+        display: block;
+    }
+
+    .plus-icon{
+        display: none;
+    }
+
+    .minus-icon{
+        /* the default for span */
+        display: inline;
+    }
+}

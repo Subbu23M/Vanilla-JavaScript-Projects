@@ -1,0 +1,117 @@
+body {
+  font-family: "Piazzolla", serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f1f5f8;
+  color: #102a42;
+}
+
+button:focus {
+  outline: none;
+}
+
+h2 {
+  text-transform: capitalize;
+  letter-spacing: 0.25rem;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: #617d98;
+  text-transform: capitalize;
+}
+
+section {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+section .title {
+  margin-top: 15vh;
+  margin-bottom: 4rem;
+}
+
+section .title h2 {
+  color: #C59D5F;
+  text-align: center;
+}
+
+section .question-section {
+  max-width: 620px;
+}
+
+section .question-section .question {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+section .question-section .question .question-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1rem;
+}
+
+section .question-section .question .question-title p {
+  margin-bottom: 0;
+  letter-spacing: 0.25rem;
+  color: #102a42;
+}
+
+section .question-section .question .question-title .question-button {
+  font-size: 1.5rem;
+  background-color: transparent;
+  border-color: transparent;
+  color: #C59D5F;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+section .question-section .question .question-title .question-button:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+section .question-section .question .answer-title {
+  padding: 1rem 0 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+section .question-section .question .answer-title p {
+  margin-bottom: 0;
+}
+
+.minus-icon, .answer-title {
+  display: none;
+}
+
+.show-answer .answer-title {
+  display: block;
+}
+
+.show-answer .plus-icon {
+  display: none;
+}
+
+.show-answer .minus-icon {
+  /* the default for span */
+  display: inline;
+}
+/*# sourceMappingURL=main.css.map */

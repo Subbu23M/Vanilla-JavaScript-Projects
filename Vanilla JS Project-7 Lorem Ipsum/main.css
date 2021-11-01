@@ -1,0 +1,98 @@
+body {
+  font-family: 'Great Vibes', cursive;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f1f5f8;
+  color: #102a42;
+}
+
+button {
+  font-family: 'Great Vibes', cursive;
+}
+
+button:focus {
+  outline: none;
+}
+
+h3 {
+  text-transform: capitalize;
+  letter-spacing: 0.25rem;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: #063251;
+}
+
+section {
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 40rem;
+  margin-top: 5rem;
+}
+
+section h3 {
+  text-transform: uppercase;
+}
+
+section .lorem-form {
+  text-transform: capitalize;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  letter-spacing: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .lorem-form label {
+  font-size: 1.25rem;
+  color: #063251;
+}
+
+section .lorem-form input {
+  padding: 0.25rem 0.5rem;
+  width: 4rem;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+}
+
+section .lorem-form .btn {
+  text-transform: uppercase;
+  background-color: #49a6e9;
+  color: #063251;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  font-size: 0.875rem;
+  border: 2px solid #49a6e9;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+section .lorem-form .btn:hover {
+  color: #49a6e9;
+  background-color: #a5d5f8;
+  border-color: #a5d5f8;
+}
+
+.result {
+  color: lightcoral;
+}
+/*# sourceMappingURL=main.css.map */
