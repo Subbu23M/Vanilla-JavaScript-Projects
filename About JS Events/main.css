@@ -1,0 +1,27 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.headerOne {
+  background-color: lightblue;
+  color: darkcyan;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.btnStyle {
+  background-color: lightgreen;
+  color: firebrick;
+  text-transform: uppercase;
+}
+
+a {
+  display: inline-block;
+  margin-top: 100%;
+}
+/*# sourceMappingURL=main.css.map */

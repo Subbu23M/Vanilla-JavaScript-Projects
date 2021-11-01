@@ -1,0 +1,28 @@
+// Universal Effects
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+button {
+    font-family: 'Playfair Display', serif;
+}
+
+button:focus {
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+.height{
+    min-height: 50vh;
+}
