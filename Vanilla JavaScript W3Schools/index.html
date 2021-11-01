@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title ICON -->
+    <link rel="icon" href="./iconmonstr-code-5.svg">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./one.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@500&display=swap" rel="stylesheet">
+
+    <title>Vanilla JS Tutorial</title>
+
+    <!-- Internal CSS -->
+    <style>
+        .color{
+            color: aqua;
+            letter-spacing: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        JavaScript is kind of a programming language
+    </h2>
+
+    <h2>
+        JavaScript is kind of a programming language
+    </h2>
+
+    <p id="change">
+        Used to manipulate the DOM
+    </p>
+
+    <!-- Using Events : The HTML DOM allows you to execute code when an event occurs. -->
+
+    <!-- In this example, the content of the <p> element is changed when a user clicks on it: -->
+        <button type="button" class="btn" id="btn" onclick="document.getElementById('change').innerHTML='JavaScript is easy to learn'">
+            Click Me!
+        </button>
+
+    <!-- Manipulating the CSS fontSize -->
+        <button type="button" class="btn" onclick="document.getElementById('change').style.fontSize='3rem'">
+            Click Me!
+        </button>
+
+    <!--In this example, a function is called from the event handler -->
+    <!--Manipulating the p tag color using External JS  -->
+        <button type="button" class="btn" onclick="myChange()">
+            Click Me!
+        </button>
+
+    <!-- Changing the Value of an Attribute -->
+    <!-- This example changes the value of the src attribute of an <img> element -->
+
+        <button class="btn" onclick="document.getElementById('bulb-off').src='./bulb-on.jpg'">
+            Turn On the Bulb
+        </button>
+
+            <img src="./bulb-off.png" id="bulb-off" alt="bulb-off" style="margin: 2rem;">
+
+        <button class="btn" onclick="document.getElementById('bulb-off').src='./bulb-off.png'" >
+            Turn Off The Bulb
+        </button>
+        <br>
+
+    <!--The onchange Event : The onchange event is often used in combination with validation of input fields.  -->
+    <h3>
+        Enter Your Name:
+    </h3>
+
+    <!-- call back function() -->
+    <input type="text" id="text" class="btn" onchange="changeText()">
+
+        <ul id="special">
+            <li class="Orange">
+                Oranges
+            </li>
+
+            <li>
+                Oranges
+            </li>
+
+            <li class="Orange">
+                Oranges
+            </li>
+
+            <li>
+                Oranges
+            </li>
+
+            <li class="Orange">
+                Oranges
+            </li>
+        </ul>
+
+        <!-- Navigating Between Nodes -->
+        <ul id="fruits">
+            <li>
+                Apple
+            </li>
+
+            <li>
+                Custard Apple
+            </li>
+
+            <li>
+                Banana
+            </li>
+
+            <li>
+                Grapes
+            </li>
+
+            <li>
+                Mango
+            </li>
+
+            <li>
+                Kiwi
+            </li>
+        </ul>
+
+        <ul>
+            <li class="first">
+                Hercules Cycle
+            </li>
+
+            <li>
+                Hercules Cycle
+            </li>
+
+            <li>
+                Hercules Cycle
+            </li>
+
+            <li class="last">
+                Hercules Cycle
+            </li>
+        </ul>
+
+    <!-- JS Events -->
+    <!-- The onmouseover and onmouseout Events.
+        The onmouseover and onmouseout events can be used to trigger a function when the user mouses over, or out of, an HTML element -->
+
+        <button onclick="this.innerHTML=Date()" class="btn">Present Time?</button>
+
+        <p onmouseover="this.style.backgroundColor='red'">Hello World!</p>
+
+        <p onmouseout="this.style.backgroundColor='blue'">Hello World!</p>
+    
+    <h3 id="headerthree">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, fugiat?
+    </h3>  
+    
+    <ul>
+        <li class="cycle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, iure.
+        </li>
+
+        <li id="trycycle" class="bicycle">
+            Lorem ipsum dolor sit amet.
+        </li>
+
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque veritatis dolores ipsa odit dolore, vel reiciendis dolorum tempore at doloribus reprehenderit laborum, vitae consequuntur ipsum cumque quod? Nemo, esse neque.</li>
+    </ul>
+
+    <h4 id="nav" class="nav">
+        Hello,Vanilla JavaScript
+    </h4>
+
+    <h4 id="navi">
+        Hello,Vanilla JavaScript
+    </h4>
+
+    <h4 id="navig">
+        Hello,Vanilla JavaScript
+    </h4>
+
+    <div id="result">
+        <h4>
+            Hello, Vanilla JavaScript SRH
+        </h4>
+    </div>
+
+    <h5>
+        Hello SRH
+    </h5>
+
+    <div id="child">
+        <h6>
+            Hello KXIP
+        </h6>
+    </div>
+
+    <div id="remove">
+        <h5>
+            Hello SRH
+        </h5>
+
+        <h5>
+            Hello SRH
+        </h5>
+    </div>
+
+    <div id="html">
+        <h4>
+            Hello CSK
+        </h4>
+
+        <h4>
+            Hello RR
+        </h4>
+    </div>
+
+    <h4 class="sun">
+        hello World!
+    </h4>
+
+    <!-- External JS -->
+    <script src="./one.js"></script>
+    <script src="./DOM.js"></script>
+    
+</body>
+</html>

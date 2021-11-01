@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    font-family: 'Piazzolla', serif; 
+}
+
+.btn{
+    width: 50%;
+    color:lightcoral;
+    font-size: 2rem;
+
+    // border:size style color
+    border: 2px solid lightgreen;
+
+    padding: 1rem;
+    margin: 2rem;
+    background: whitesmoke;
+    cursor: pointer;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+h3{
+    text-transform: capitalize;
+    color: tan;
+    text-align: center;
+}
+
+.butn{
+    background-color: tomato;
+
+    //Transparent color in CSS makes background elements visible from another top element of the page.
+    border: transparent;
+
+    color: whitesmoke;
+    width: 40%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.butn:focus{
+    outline: none;
+}
+
+.press{
+    background-color: tomato;
+
+    //Transparent color in CSS makes background elements visible from another top element of the page.
+    border: transparent;
+
+    color: whitesmoke;
+    width: 40%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.press:focus{
+    outline:none;
+}
+
+.btns{
+    background-color: tomato;
+
+    //Transparent color in CSS makes background elements visible from another top element of the page.
+    border: transparent;
+
+    color: whitesmoke;
+    width: 40%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btns:focus{
+    outline: none;
+}
+
+.betn{
+    background-color: tomato;
+
+    //Transparent color in CSS makes background elements visible from another top element of the page.
+    border: transparent;
+    
+    color: whitesmoke;
+    width: 40%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.betn:focus{
+    outline: none;
+}
