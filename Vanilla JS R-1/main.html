@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vanilla JS Revision-1</title>
+
+    <!-- Title ICON -->
+    <link rel="ICON" href="./iconmonstr-code-5.svg">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./main.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@500&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <h2>Display Date and Time</h2>
+
+    <!-- Manipulating the DOM -->
+        <h3 id="date"></h3>
+
+        <button type="button" class="btn" onclick="document.getElementById('date').innerHTML=Date()">Click Here To Display Date and Time</button>
+        <br>
+
+    <!-- JavaScript Can Change HTML Content -->
+        <p id="change">Hello, W3 Schools i am learning JS</p>
+
+        <button type="button" class="btn" onclick="document.getElementById('change').innerHTML='Hello Vanilla JS'">Click Here To Change Text in p tag</button>
+        <br>
+
+    <!-- JavaScript Can Change HTML Styles (CSS) -->
+        <button type="button" class="btn" onclick="document.getElementById('change').style.fontSize='3rem'">Click Here To increase fontSize of p tag</button>
+        <br>
+
+    <!-- JavaScript Can Hide HTML Elements -->
+        <button type="button" class="btn" onclick="document.getElementById('change').style.display='none'">Click Here To hide Text in p tag</button>
+        <br>
+
+    <!-- JavaScript Can Show HTML Elements -->
+        <button type="button" class="btn" onclick="document.getElementById('change').style.display='block'">Click Here To Show Text in p tag</button>
+        <br>
+
+
+    <!-- External JS -->
+    <script src="./main.js"></script>
+</body>
+</html>

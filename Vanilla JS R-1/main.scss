@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+
+button{
+    font-family: 'Piazzolla', serif;  
+}
+
+.btn{
+    color: salmon;
+    padding: 1rem;
+    margin: 1em;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:focus{
+    outline: none;
+}
