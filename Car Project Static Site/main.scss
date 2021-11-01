@@ -1,0 +1,314 @@
+$primaryFont:'Piazzolla', serif;
+$secondaryFont:'Kaushan Script', cursive;
+
+// Colors
+$blueColor:#4BACF1;
+$transparentBlueColor:rgba(64,172,241,0.7);
+$blackColor:#292F36;
+$greyColor:rgb(216,214,214);
+$yellowColor:#E3B585;
+$pinkColor:#EF7998;
+$mainYellowColor:rgb(249,228,148);
+$transparentYellowColor:rgba(249,228,148,0.5);
+$mainGreyColor:rgb(238,238,238);
+
+// Universal Effects
+body{
+    font-family: $primaryFont;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x:hidden ;
+}
+
+button{
+    font-family: 'Piazzolla', serif;
+}
+
+button:focus{
+    outline: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+// For Pre-loader
+.pre-loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: white;
+
+    // Convert row into column
+    display: grid;
+
+    // On X-axis
+    justify-content: center;
+
+    // On Y-axis
+    align-items: center;
+
+    visibility: visible;
+
+    /* z-index:stacks one on each other based on value  */
+    z-index: 999;
+}
+
+.hide-pre-loader{
+    visibility: hidden;
+
+    /* z-index:stacks one on each other based on value  */
+    z-index: -999;
+}
+
+// Styles for navbar
+nav{
+    background-color: $mainGreyColor;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+
+    ul li{
+        // For inline-block we can add top right margin padding.
+        //It does not move to next line. 
+        display: inline-block;
+
+        font-size: 1.4rem;
+
+        a{
+            color: $blackColor;
+            margin: 1rem;
+        }
+    }
+
+    ul li a:hover{
+        color: $pinkColor;
+        text-decoration: underline;
+    }
+}
+
+// Media Queries
+@media screen and (max-width:400px){
+    nav{
+        height: 110px;
+    }
+}
+
+// For Banner Section
+#banner{
+
+    .min-height{
+        min-height: 100vh;
+    }
+
+    h2{
+        color: $transparentBlueColor;
+        letter-spacing: 1rem;
+    }
+
+    .underline-one{
+        width: 260px;
+        height: .4rem;
+        background-color: $pinkColor;
+    }
+
+    background: url(./Banner-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    // If we use cover; it will cut off the sides of the image, preserving the aspect ratio, and also filling in the space.
+    background-size: cover;
+
+    // Parallax Effects
+    background-attachment: fixed;
+}
+
+// For About Us Section
+#about{
+
+    .about-special{
+        font-family: $secondaryFont;
+        color: $pinkColor;
+        font-size: 2rem;
+    }
+
+    .about-image-container{
+        /* position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+        position: relative;
+    }
+
+    .about-image-container::before{
+        /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+        position: absolute;
+
+        content: '';
+
+        top: -1.5rem;
+        left: -1.7rem;
+
+        width: 118%;
+        height: 100%;
+
+        // outline:size style color
+        outline: 0.5rem solid $mainYellowColor;
+
+        /* z-index:stacks one on each other based on value  */
+        z-index: -1;
+
+        // transition:property duration
+        // transition-timing-function:linear - specifies a transition effect with the same speed from start to end.
+        transition: all 2s linear;
+    }
+    .about-image-container:hover::before{
+        top: 0;
+        left: 0;
+    }
+}
+
+// For portfolio section
+#portfolio{
+
+    h2{
+        color: $blackColor;
+    }
+
+    .underline-two{
+        width: 120px;
+        height: .4rem;
+        background-color: $mainGreyColor;
+    }
+
+    .card{
+        /* position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+        position: relative;
+
+        .fa-car{
+            /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+            position: absolute;
+
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            // transform: propert duration
+            transform: opacity 4s;
+
+            // The opacity-level describes the transparency-level.
+            opacity: 0;
+        }
+
+        .card-body{
+            .car-price{
+                background-color: $transparentBlueColor;
+                color: white;
+                clip-path: polygon(15% 0,85% 0,100% 100%,0 100%);
+                
+                // transition:Default value duration
+                // transition-timing-function:linear - specifies a transition effect with the same speed from start to end.
+                transition: all 2s linear;
+            }
+            .car-price:hover{
+                clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+            }
+        }
+    
+    }
+
+    .card:hover{
+        img{
+            // The opacity-level describes the transparency-level.
+            opacity: 0.4;
+        }
+        .fa-car{
+            // The opacity-level describes the transparency-level.
+            opacity: 1;
+        }
+    } 
+}
+
+// For store section
+#store{
+    .store-special{
+        font-size: 3rem;
+        font-weight: bold;
+        color: $pinkColor;
+    }
+
+    .underline-three{
+        width:120px;
+        height: .4rem;
+        background-color: $blueColor;
+    }
+
+    .card-store{
+        // transition:Default value Duration
+        // transition-timing-function:linear - specifies a transition effect with the same speed from start to end.
+        transition: all 0.2s linear;
+
+        .store-image-container{
+            /* position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+            position: relative;
+
+            overflow: hidden;
+            cursor: pointer;
+
+            .store-photo{
+                // transition:Default value Duration
+                // transition-timing-function:ease-in-out:Specifies a transition effect with a slow start and end
+                transition: all 2s ease-in-out;
+            }
+            .store-icon{
+                /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+                position: absolute;
+                
+                bottom: 0;
+                right: 0;
+                background-color: $mainYellowColor;
+                padding: 1rem;
+                border-top-left-radius: 1rem;
+                transform: translate(100%,100%);
+            }
+            .store-icon:hover{
+                color: $pinkColor;
+            }
+        }
+        .store-image-container:hover{
+            .store-photo{
+                transform: scale(1.2);
+            }
+            .store-icon{
+                transform: translate(0,0);
+            }
+        }
+    }
+    .card-store:hover{
+        // box-shadow:<offset-x> <offset-y> <blur-radius> color
+        box-shadow: 0px 10px 15px $mainYellowColor;
+    }
+}
+
+
+// For footer
+#footer{
+    .footer-icons{
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+}
