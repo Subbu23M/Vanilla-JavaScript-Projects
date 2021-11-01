@@ -1,0 +1,95 @@
+// Colors
+// hsl:(hue, saturation, lightness).
+
+$background-color: hsl(210, 36%, 96%);
+$bodycolor:hsl(209, 61%, 16%);
+$blackcolor:#222;
+$whitecolor:#fff;
+$btntextcolors:hsl(209, 61%, 16%);
+
+body {
+    font-family: 'Piazzolla', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $background-color;
+    color: $bodycolor;
+}
+
+button {
+    font-family: 'Piazzolla', serif;
+    text-transform: uppercase;
+}
+
+button:focus {
+    outline: none;
+}
+
+h1 {
+    text-transform: capitalize;
+
+    // On Y-axis
+    line-height: 1.25;
+
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.75rem;
+    font-size: 3rem;
+}
+
+main {
+    min-height: 100vh;
+
+    // convert rows into columns
+    display: grid;
+
+    // The CSS place-items shorthand property allows you to align items along both the block and inline directions at once (i.e. the align-items and justify-items properties) in a relevant layout system such as Grid or Flexbox.
+    place-items: center;
+
+    .container {
+        text-align: center;
+
+        #span-number {
+            font-size: 5rem;
+            font-weight: bold;
+        }
+
+        .button-container {
+            .btn {
+                // Transparent color in CSS makes background elements visible from another top element of the page.
+                background: transparent;
+
+                letter-spacing: 0.1rem;
+
+                // padding:top & bottom left & right
+                padding: 0.5rem 0.25rem;
+
+                // For inline-block we can add top right margin padding.
+                //It does not move to next line. 
+                display: inline-block;
+
+                font-size: 0.7rem;
+
+                cursor: pointer;
+
+                // transition:Default value transition-duration transition-timing-function.
+                // linear:Specifies a transition effect with the same speed from start to end. 
+                transition: all 0.3s linear;
+
+                // border:size style color
+                border: 2px solid $blackcolor;
+
+                // box-shadow:<offset-x> <offset-y> <blur-radius>
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+                border-radius: 0.2rem;
+                margin: 1rem;
+                color: $btntextcolors;
+            }
+
+            .btn:hover {
+                background-color: $blackcolor;
+                color: $whitecolor;
+            }
+        }
+    }
+}
