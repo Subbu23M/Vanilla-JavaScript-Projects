@@ -7,7 +7,7 @@ const span = document.querySelector('.span-color');
 const btn = document.getElementById('btn');
 const bodyElement = document.querySelector('body');
 
-// Ananymous function
+// function declaration
 function hexCol() {
     // Declared & Assigned
     let hexSymbol = "#";
